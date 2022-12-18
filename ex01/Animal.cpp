@@ -19,6 +19,7 @@ Animal::Animal(const Animal &obj)
 Animal::~Animal()
 {
 	std::cout << "Animal Destractor() called" << std::endl;
+	// system("leaks -q a.out");
 }
 
 Animal& Animal::operator = (const Animal &obj)

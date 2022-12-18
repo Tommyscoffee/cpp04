@@ -3,6 +3,7 @@
 #include "Cat.hpp"
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
+#include <libc.h>
 
 // int main()
 // {
@@ -76,26 +77,26 @@ static void	tic_tac(int usleep_time, int duration, std::string color)
 }
 
 int main(void) {
-	// {
-	// 	// Heap allocation
-	// 	const Animal *dog = new Dog();
-	// 	tic_tac(500000, 2, GREEN);
-	// 	const Animal *cat = new Cat();
-	// 	tic_tac(500000, 2, GREEN);
-	// 	delete dog;
-	// 	tic_tac(500000, 2, GREEN);
-	// 	delete cat;
-	// 	tic_tac(500000, 5, GREEN);
-	// }
-	// {
-	// 	// Stack allocation
-	// 	Dog dog;
-	// 	tic_tac(500000, 2, RED);
-	// 	Cat cat;
-	// 	tic_tac(500000, 2, RED);
-	// 	Cat cat2(cat); // Copy constructor
-	// 	tic_tac(500000, 5, RED);
-	// }
+	{
+		// Heap allocation
+		const Animal *dog = new Dog();
+		tic_tac(500000, 2, GREEN);
+		const Animal *cat = new Cat();
+		tic_tac(500000, 2, GREEN);
+		delete dog;
+		tic_tac(500000, 2, GREEN);
+		delete cat;
+		tic_tac(500000, 5, GREEN);
+	}
+	{
+		// Stack allocation
+		Dog dog;
+		tic_tac(500000, 2, RED);
+		Cat cat;
+		tic_tac(500000, 2, RED);
+		Cat cat2(cat); // Copy constructor
+		tic_tac(500000, 5, RED);
+	}
 	{
 		// Array of pointers to Animal
 		Animal *animals[N];
