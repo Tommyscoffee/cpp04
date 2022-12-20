@@ -15,4 +15,5 @@ class AAnimal{
 		virtual void makeSound()const =0 ;
 		const std::string &getType() const;
 };
+
 #endif

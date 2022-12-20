@@ -115,6 +115,12 @@ int main(void) {
 		}
 		tic_tac(500000, 2, ORANGE);
 	}
+	{
+		Dog basic;
+		{
+			Dog tmp = basic;
+		}
+	}
 	// {
 	// 	Dog basic;
 	// 	tic_tac(500000, 2, ORANGE);
